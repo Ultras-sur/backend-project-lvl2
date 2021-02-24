@@ -2,10 +2,13 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Ultras-sur/backend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Ultras-sur/backend-project-lvl2/actions)",
-  "main": "index.js",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "main": "bin/gendiff.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ultras-sur/backend-project-lvl2.git"
@@ -15,9 +18,11 @@
   "bugs": {
     "url": "https://github.com/Ultras-sur/backend-project-lvl2/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/Ultras-sur/backend-project-lvl2#readme",
   "dependencies": {
-    "commander": "^7.1.0"
+    "commander": "^7.1.0",
+    "lodash": "4.17.21"
   },
   "devDependencies": {
     "eslint": "^7.17.0",

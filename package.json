@@ -6,7 +6,8 @@
     "gendiff": "bin/gendiff.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx -n '--experimental-vm-modules --no-warnings' jest --watch",
+    "format": "prettier --write ."
   },
   "main": "bin/gendiff.js",
   "repository": {
@@ -19,6 +20,10 @@
     "url": "https://github.com/Ultras-sur/backend-project-lvl2/issues"
   },
   "type": "module",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {}
+  },
   "homepage": "https://github.com/Ultras-sur/backend-project-lvl2#readme",
   "dependencies": {
     "commander": "^7.1.0",
@@ -27,6 +32,9 @@
   "devDependencies": {
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
   }
 }

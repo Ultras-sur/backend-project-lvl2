@@ -9,3 +9,6 @@ lint:
 
 push: 
 	git push -u origin main
+
+format:
+	npm run format

@@ -12,3 +12,6 @@ push:
 
 format:
 	npm run format
+
+test: 
+	npx -n '--experimental-vm-modules --no-warnings' jest 	

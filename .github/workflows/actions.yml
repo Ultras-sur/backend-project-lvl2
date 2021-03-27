@@ -1,6 +1,6 @@
 name: run-actions
 
-  on: push
+on: push
 
   jobs:
 

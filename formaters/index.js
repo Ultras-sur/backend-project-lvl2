@@ -1,13 +1,16 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
+import json from './json.js';
 
 export default (astTree, formatName) => {
-  let formatter;
+  let formater;
 
   if (formatName === 'stylish') {
-    formatter = stylish;
+    formater = stylish;
   } else if (formatName === 'plain') {
-    formatter = plain;
+    formater = plain;
+  } else if (formatName === 'json') {
+    formater = json;
   }
-  return formatter(astTree);
+  return formater(astTree);
 };

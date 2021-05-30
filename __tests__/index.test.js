@@ -91,6 +91,9 @@ const expect4 =
   "Property 'group2' was removed\n" +
   "Property 'group3' was added with value: [complex value]";
 
+const expect5 =
+  '{"common":{"+ follow":false,"setting1":"Value 1","- setting2":200,"- setting3":true,"+ setting3":null,"+ setting4":"blah blah","+ setting5":{"key5":"value5"},"setting6":{"doge":{"- wow":"","+ wow":"so much"},"key":"value","+ ops":"vops"}},"group1":{"- baz":"bas","+ baz":"bars","foo":"bar","- nest":{"key":"value"},"+ nest":"str"},"- group2":{"abc":12345,"deep":{"id":45}},"+ group3":{"deep":{"id":{"number":45}},"fee":100500}}';
+
 test('Test not tree 1', () => {
   expect(compare(file1, file2)).toEqual(expect1);
 });
@@ -98,10 +101,13 @@ test('Test not tree 1', () => {
 test('Test not tree 2', () => {
   expect(compare(file2, file1)).toEqual(expect2);
 });
-test('Test compare formatter stylish', () => {
+test('Test compare formater stylish', () => {
   expect(compare(fileTreeYml1, fileTreeyml2, 'stylish')).toEqual(expect3);
 });
 
-test('Test compare formatter plain', () => {
+test('Test compare formater plain', () => {
   expect(compare(fileTreeYml1, fileTreeyml2, 'plain')).toEqual(expect4);
+});
+test('Test compare formater json', () => {
+  expect(compare(fileTreeYml1, fileTreeyml2, 'json')).toEqual(expect5);
 });
